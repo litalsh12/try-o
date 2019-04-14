@@ -16,7 +16,7 @@ PhysicalNumber.o: PhysicalNumber.h Unit.h
 
 PhysicalNumberDemo.o: PhysicalNumber.h Unit.h
 
-PhysicalNumberTest.o: PhysicalNumber.h Unit.h badkan.hpp
+PhysicalNumberTest.o: PhysicalNumber.h Unit.h badkan.hpp OurPhysicalNumberTest.o
 
 clean:
 	rm -f *.o demo test
