@@ -6,7 +6,7 @@ all: test
 demo: PhysicalNumberDemo.o PhysicalNumber.o
 	clang++-5.0 -std=c++17 $^ -o demo
 
-test: PhysicalNumberTest.o PhysicalNumber.o OurPhysicalNumberTest.o
+test: PhysicalNumberTest.o PhysicalNumber.o
 	clang++-5.0 -std=c++17 $^ -o test
 
 %.o: %.cpp
@@ -16,9 +16,7 @@ PhysicalNumber.o: PhysicalNumber.h Unit.h
 
 PhysicalNumberDemo.o: PhysicalNumber.h Unit.h
 
-PhysicalNumberTest.o: PhysicalNumber.h Unit.h badkan.hpp 
-
-OurPhysicalNumberTest.o: OurPhysicalNumberTest.h Unit.h badkan.hpp
+OurPhysicalNumberTest.o: PhysicalNumber.h Unit.h badkan.hpp
 
 clean:
 	rm -f *.o demo test
